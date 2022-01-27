@@ -80,7 +80,7 @@ class DiscordGSM():
         icon_file_name = 'images/discordgsm' + ('DGSM_TOKEN' in os.environ and '-heroku' or '') + '.png'
         with open(icon_file_name, 'rb') as file:
             try:
-                await bot.user.edit(username='DiscordGSM', avatar=file.read())
+                await bot.user.edit(username='2.FJg GSM', avatar=file.read())
             except:
                 pass
 
@@ -300,13 +300,13 @@ class DiscordGSM():
                     embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/hurtgen.webp')
                 elif data['map'] == 'SME':
                     embed.add_field(name=FIELD_CURRENTMAP, value='St. Mere Eglise', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.webp')
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/sme.webp')
                 elif data['map'] == 'Kursk':
                     embed.add_field(name=FIELD_CURRENTMAP, value='Kursk', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.webp')
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/kursk.webp')
                 elif data['map'] == 'PHL':
                     embed.add_field(name=FIELD_CURRENTMAP, value='Purple Heart Lane', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.webp')
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/phl.webp')
                 else: 
                     #fallback for unknown maps
                     embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
@@ -321,7 +321,7 @@ class DiscordGSM():
             embed = discord.Embed(title='ERROR', description=f'{FIELD_STATUS}: :warning: **Fail to query**', color=color)
             embed.add_field(name=f'{FIELD_ADDRESS}:{FIELD_PORT}', value=f'{server["addr"]}:{server["port"]}', inline=True)
         
-        embed.set_footer(text=f'2FJg DiscordGSM v{VERSION} | 📺Game Server Monitor | Last update: ' + datetime.now().strftime('%a, %Y-%m-%d %I:%M:%S%p'), icon_url='https://github.com/DiscordGSM/DiscordGSM/raw/master/images/discordgsm.png')
+        embed.set_footer(text=f'2.FJg DiscordGSM v{VERSION} | 📺Game Server Monitor | Last update: ' + datetime.now().strftime('%a, %Y-%m-%d %I:%M:%S%p'), icon_url='https://github.com/DiscordGSM/DiscordGSM/raw/master/images/discordgsm.png')
         
         return embed
 
