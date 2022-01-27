@@ -255,7 +255,6 @@ class DiscordGSM():
             embed.add_field(name=FIELD_COUNTRY, value=flag_emoji, inline=True)
 
             embed.add_field(name=FIELD_GAME, value=data['game'], inline=True)
-            embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
 
             if status == 'Online':
                 value = str(data['players']) # example: 20/32
@@ -273,7 +272,23 @@ class DiscordGSM():
 
             embed.set_thumbnail(url=image_url)
 
-            embed.set_image(url='https://cdn.discordapp.com/splashes/150808259786309632/a944aa17e942538f7ca4b406fb43af48.jpg?size=1024')
+            #Customised HLL Maps
+            if data['game'] == 'Hell Let Loose':
+                if data['map'] == 'CT':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Carentan', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/carentan.jpg')
+
+                elif data['map'] == 'StMarie':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='St. Marie du Mont', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/smdt.jpg')
+
+                else: 
+                    embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
+                    embed.set_image(url='https://cdn.discordapp.com/splashes/150808259786309632/a944aa17e942538f7ca4b406fb43af48.jpg?size=1024')
+            else:      
+                #Default
+                embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
+
         else:
             # server fail to query
             color = discord.Color.from_rgb(240, 71, 71) # red
