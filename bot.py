@@ -272,13 +272,15 @@ class DiscordGSM():
                 image_url += f'/{urllib.parse.quote(data["map"])}.jpg'
 
             embed.set_thumbnail(url=image_url)
+
+            embed.set_image(url='https://cdn.discordapp.com/splashes/150808259786309632/a944aa17e942538f7ca4b406fb43af48.jpg?size=1024')
         else:
             # server fail to query
             color = discord.Color.from_rgb(240, 71, 71) # red
             embed = discord.Embed(title='ERROR', description=f'{FIELD_STATUS}: :warning: **Fail to query**', color=color)
             embed.add_field(name=f'{FIELD_ADDRESS}:{FIELD_PORT}', value=f'{server["addr"]}:{server["port"]}', inline=True)
         
-        embed.set_footer(text=f'DiscordGSM v{VERSION} | 📺Game Server Monitor | Last update: ' + datetime.now().strftime('%a, %Y-%m-%d %I:%M:%S%p'), icon_url='https://github.com/DiscordGSM/DiscordGSM/raw/master/images/discordgsm.png')
+        embed.set_footer(text=f'2FJg DiscordGSM v{VERSION} | 📺Game Server Monitor | Last update: ' + datetime.now().strftime('%a, %Y-%m-%d %I:%M:%S%p'), icon_url='https://github.com/DiscordGSM/DiscordGSM/raw/master/images/discordgsm.png')
         
         return embed
 
