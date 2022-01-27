@@ -276,15 +276,41 @@ class DiscordGSM():
             if data['game'] == 'Hell Let Loose':
                 if data['map'] == 'CT':
                     embed.add_field(name=FIELD_CURRENTMAP, value='Carentan', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/carentan.jpg')
-
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/carentan.webp')
                 elif data['map'] == 'StMarie':
                     embed.add_field(name=FIELD_CURRENTMAP, value='St. Marie du Mont', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/smdt.jpg')
-
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/smdm.wepb')
+                elif data['map'] == 'Omaha':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Omaha Beach', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.wepb')
+                elif data['map'] == 'Utah':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Utah Beach', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/utah.wepb')
+                elif data['map'] == 'Stalin':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Stalingrad', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/stalingrad.wepb')
+                elif data['map'] == 'Foy':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Foy', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/foy.wepb')
+                elif data['map'] == 'Hill400':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Hill 400', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/hill400.wepb')
+                elif data['map'] == 'Hurtgen':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Hurtgen Forest', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/hurtgen.wepb')
+                elif data['map'] == 'SME':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='St. Mere Eglise', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.wepb')
+                elif data['map'] == 'Kursk':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Kursk', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.wepb')
+                elif data['map'] == 'PHL':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Purple Heart Lane', inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.wepb')
                 else: 
+                    #fallback for unknown maps
                     embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
-                    embed.set_image(url='https://cdn.discordapp.com/splashes/150808259786309632/a944aa17e942538f7ca4b406fb43af48.jpg?size=1024')
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/2fjg_default.jpg')
             else:      
                 #Default
                 embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
