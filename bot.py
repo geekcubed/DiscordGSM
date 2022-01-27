@@ -279,7 +279,7 @@ class DiscordGSM():
                     embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/carentan.webp')
                 elif data['map'] == 'StMarie':
                     embed.add_field(name=FIELD_CURRENTMAP, value='St. Marie du Mont', inline=True)
-                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/smdm.wepb')
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/smdm.jpg')
                 elif data['map'] == 'Omaha':
                     embed.add_field(name=FIELD_CURRENTMAP, value='Omaha Beach', inline=True)
                     embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/omaha.wepb')
