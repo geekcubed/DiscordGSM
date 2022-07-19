@@ -307,6 +307,9 @@ class DiscordGSM():
                 elif data['map'] == 'PHL':
                     embed.add_field(name=FIELD_CURRENTMAP, value='Purple Heart Lane', inline=True)
                     embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/phl.webp')
+                elif data['map'] == 'Remagen':
+                    embed.add_field(name=FIELD_CURRENTMAP, value='Remagen, inline=True)
+                    embed.set_image(url='https://raw.githubusercontent.com/geekcubed/DiscordGSM/2fjg/images/games/hll/remagen.webp')
                 else: 
                     #fallback for unknown maps
                     embed.add_field(name=FIELD_CURRENTMAP, value=data['map'], inline=True)
